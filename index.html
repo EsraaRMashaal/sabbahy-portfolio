@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Ismail El-Sabbahy | Continuous Improvement Engineer</title>
+    <title>Mohammed Ismail El-Sabbahy | CI Engineer</title>
     
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -126,7 +126,6 @@
         const { useState, useEffect, useRef } = React;
 
         // --- ICONS ---
-        // Using Lucide icons via valid React component creation
         const Icon = ({ name, size = 24, className = "" }) => {
             const iconRef = useRef(null);
             
@@ -154,8 +153,9 @@
             location: "Egypt",
             email: "Sabbahy.Gendy@gmail.com",
             phone: "(002) 01033183118",
-            linkedin: "linkedin.com/in/mohammedsabbahy",
-            photoUrl: "profile.jpg"
+            linkedin: "linkedin.com/in/Mohammed Sabbahy",
+            photoUrl: "profile.jpg", 
+            cvUrl: "cv.pdf" 
         };
 
         const about = {
@@ -246,7 +246,7 @@
                 impact: "Orléans Plant, France",
                 description: "Selected to represent ECET Egypt at the Groupe Atlantic Orléans Plant in France. Collaborated with global operations leaders on NVA/VA analysis, line balancing methodologies, and the future of AI in manufacturing.",
                 icon: "globe",
-                highlight: true // Added flag for special styling
+                highlight: true 
             },
             {
                 title: "Scrap Rate Reduction",
@@ -357,7 +357,8 @@
                             <a href="#contact" className="px-8 py-4 bg-brand text-white font-bold font-mono tracking-wide hover:bg-brand-dark transition-colors shadow-lg shadow-brand/30 flex items-center justify-center gap-2">
                                 <i data-lucide="mail" className="w-4 h-4"></i> CONTACT ME
                             </a>
-                            <a href="#" className="px-8 py-4 bg-transparent border border-slate-600 text-white font-bold font-mono tracking-wide hover:border-white transition-colors flex items-center justify-center gap-2">
+                            {/* DOWNLOAD CV BUTTON - UPDATED */}
+                            <a href={profile.cvUrl} download className="px-8 py-4 bg-transparent border border-slate-600 text-white font-bold font-mono tracking-wide hover:border-white transition-colors flex items-center justify-center gap-2">
                                 <i data-lucide="download" className="w-4 h-4"></i> DOWNLOAD CV
                             </a>
                         </div>
@@ -598,5 +599,4 @@
         root.render(<App />);
     </script>
 </body>
-
 </html>
