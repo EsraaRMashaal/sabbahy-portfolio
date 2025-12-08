@@ -476,9 +476,12 @@
                             {/* Tech Stack Mini-Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                                 {["Power BI", "SAP Expert", "Kaizen Leader", "Six Sigma"].map((tag, i) => (
-                                    <div key={i} className="bg-industrial-800 border border-slate-700 p-3 text-center rounded hover:border-brand/50 transition-colors">
-                                        <span className="text-brand font-mono text-xs block mb-1">SKILL_SET_0{i+1}</span>
-                                        <span className="text-white font-bold text-sm">{tag}</span>
+                                    <div key={i} className="bg-industrial-800 border border-slate-700 p-4 text-center rounded hover:border-brand/50 transition-colors flex flex-col items-center justify-center gap-2 group">
+                                        {/* Removed the SKILL_SET_0X label for a cleaner look */}
+                                        <div className="text-brand/50 group-hover:text-brand transition-colors">
+                                            <i data-lucide="cpu" className="w-5 h-5"></i>
+                                        </div>
+                                        <span className="text-white font-bold text-sm tracking-wide">{tag}</span>
                                     </div>
                                 ))}
                             </div>
